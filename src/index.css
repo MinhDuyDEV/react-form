@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    background-color: #eee;
+    font-family: "Poppins", sans-serif;
+  }
+}
+/* custom radio */
+.custom-radio {
+  width: 10px;
+  height: 10px;
+}
+.custom-radio > div {
+  box-shadow: 0 0 0 5px white;
+}
+.custom-radio input:checked + div {
+  @apply bg-blue-500;
+  box-shadow: 0 0 0 2.5px white,
+    0 0 0 5px rgb(59 130 246 / var(--tw-bg-opacity));
+  transition: all;
+}
+/* end */
+
+/* custom checkbox */
+.custom-checkbox input:checked + div .custom-checkbox-square {
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+.custom-checkbox-square {
+  width: 24px;
+  height: 24px;
+}
+.noSelect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+/* end */
+
+.divider {
+  flex-grow: 1;
+  border-bottom: 1px solid rgb(229 231 235 / var(--tw-bg-opacity));
+  margin: 5px;
+  display: inline-block;
+  width: 90%;
+}
